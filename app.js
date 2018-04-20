@@ -21,14 +21,14 @@ restService.get("/", function(req, res) {
 
 restService.post("/cities", function(req, res) {
   var speech =
-    req.body.result &&
-    req.body.result.parameters &&
-    req.body.result.parameters.echoText
-      ? req.body.result.parameters.echoText
+    req.body.queryResult &&
+    req.body.queryResult.parameters &&
+    req.body.queryResult.parameters[0].echoText
+      ? req.body.queryResult.parameters[0].echoText
       : "list cities.";
     return res.json({
         text: speech,
-        fulfillmentText: "Bangalore, Chennai, Kerala",
+        text: "Bangalore, Chennai, Kerala",
         source: "pujaNpujari"
     });
 });
