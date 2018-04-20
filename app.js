@@ -27,8 +27,8 @@ restService.post("/cities", function(req, res) {
       ? req.body.result.parameters.echoText
       : "list cities.";
     return res.json({
-        speech: speech,
-        displayText: "Bangalore, Chennai, Kerala",
+        text: speech,
+        fulfillmentText: "Bangalore, Chennai, Kerala",
         source: "pujaNpujari"
     });
 });
