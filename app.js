@@ -20,7 +20,7 @@ restService.get("/", function(req, res) {
   });
 
   restService.get("/hi", function(req, res) {
-    return { 'fulfillmentText': "Bangalore, Tamil Nadu" }
+    return res.json({ 'fulfillmentText': "Bangalore, Tamil Nadu" });
   });
 
 restService.post("/cities", function(req, res) {
