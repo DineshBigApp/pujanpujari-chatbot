@@ -19,6 +19,13 @@ restService.get("/", function(req, res) {
     });
   });
 
+  restService.get("/hi", function(req, res) {
+    return res.json({
+        text: "Bangalore, Chennai, Kerala",        
+        source: "pujaNpujari"
+    });
+  });
+
 restService.post("/cities", function(req, res) {
   var speech =
     req.body.queryResult &&
