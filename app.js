@@ -2,7 +2,7 @@
 
 const express = require("express");
 const bodyParser = require("body-parser");
-
+// const dialogflow = require('./dialogflow');
 const restService = express();
 
 restService.use(
@@ -37,6 +37,6 @@ restService.post("/cities", function(req, res) {
     });
 });
 
-restService.listen(process.env.PORT || 8000, function() {
+restService.listen(process.env.PORT || 7000, function() {
   console.log("Server up and listening");
 });
